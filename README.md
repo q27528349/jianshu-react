@@ -1,5 +1,5 @@
-##学习的一些代码注释
-#APP.js 
+#学习的一些代码注释
+##APP.js 
 import React,{Component} from 'react';
 import Header from './common/header'
 import store from './store'
@@ -39,7 +39,7 @@ react-redux 是连接react-redux之间的
 react-router-dom 为react路由 为了让子页面能通过path来路由上
 每个子页面都需要 from exact是为了完全一致 componect是指定的子页面
 
-#store/index.js(主):
+##store/index.js(主):
 
 import {createStore,compose,applyMiddleware} from 'redux'
 import thunk from 'redux-thunk' 
@@ -58,7 +58,7 @@ redux-thunk是为了让action 和store能连接的中间件 这中间件让dispa
 当dispatch收到一个函数会直接执行 对象会传递给store
 
 
-#主reducer:
+##主reducer:
 import {combineReducers}  from 'redux-immutable'; 这是让reducer有主次之分的组件
 import {reducer as headerReducers} from '../common/header/store';
 import {reducer as homeReducers} from '../pages/home/store';
@@ -78,7 +78,7 @@ export default reducer;
 
 
 
-#子页面index：
+##子页面index：
 import { SearchInfoList, SearchInfoItem, SearchInfoSwtich, SearchInfoTitie, SearchInfo, HeaderWrapper, Logo, Nav, NavItem, NavSeacth, Addtion, Button, SearchWrapper } from './style'
 styled写法
 
@@ -153,7 +153,7 @@ import {Redirect} from "react-router-dom" 这会直接返回 to的定向
                 <Conntent dangerouslySetInnerHTML={{__html:this.props.content}}/> 将对象中的html元素强行展示成dom
 
 
-#loadable.js
+##loadable.js
 
 import React from 'react';
 import Loadable from 'react-loadable'; 这组件为了让单页面不直接加载所有的子页面 而是一个个加载
@@ -176,7 +176,7 @@ export default connect(mapState,mapDispatch)(withRouter(Detail));  这里能让�
 
 
 
-#style.js
+##style.js
 import styled from 'styled-components'; styled-components 用这种写法增加style和dom元素
 
 export const NavSeacth = styled.input.attrs({
@@ -217,7 +217,7 @@ width:160px;
 background:url(${(props)=>props.imgurl}); styled中也可以传递参数 要在子组件中写入参数state
 
 
-#actioncreators.js
+##actioncreators.js
 
 import axios from 'axios'; 用于接收api后端json
 import * as constans from "./constans" 用于防止写错type而无报错
@@ -258,7 +258,7 @@ list.toJS(); 将数组变成js  immutable到js
     list :fromJS(data) 或转换成fromjs  js到immutable
 
 
-#store 子index ：
+##store 子index ：
 
 import reducer from './reducer';
 import * as actioncreators from './actioncreators'
