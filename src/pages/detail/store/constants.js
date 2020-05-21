@@ -1,0 +1,1 @@
+export const CHANGE_DATAIL="HANGE_DATAIL";
