@@ -1,4 +1,4 @@
-APP.js 
+## APP.js 
 import React,{Component} from 'react';
 import Header from './common/header'
 import store from './store'
@@ -38,7 +38,7 @@ react-redux 是连接react-redux之间的
 react-router-dom 为react路由 为了让子页面能通过path来路由上
 每个子页面都需要 from exact是为了完全一致 componect是指定的子页面
 
-store/index.js(主):
+## store/index.js(主):
 
 import {createStore,compose,applyMiddleware} from 'redux'
 import thunk from 'redux-thunk' 
@@ -57,7 +57,7 @@ redux-thunk是为了让action 和store能连接的中间件 这中间件让dispa
 当dispatch收到一个函数会直接执行 对象会传递给store
 
 
-主reducer:
+## 主reducer:
 import {combineReducers}  from 'redux-immutable'; 这是让reducer有主次之分的组件
 import {reducer as headerReducers} from '../common/header/store';
 import {reducer as homeReducers} from '../pages/home/store';
